@@ -1,0 +1,673 @@
+/* ================== BASE ================== */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #f1e5e5;            
+  color: #111;
+}
+
+
+
+
+/* ===== HERO HEADER FIXED  ===== */
+.hero-header {
+  position: relative;
+  width: 100%;
+  height: 340px;
+  background: url("images/image_header.jpg") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 0;
+  overflow: hidden;
+}
+
+/* Overlay  */
+.hero-header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 1;
+}
+
+.description h2 {
+  margin: 0 auto 20px;
+  width: fit-content;
+  font-family: "Poppins", "Segoe UI", Roboto, sans-serif; /* font profesional și modern */
+  font-weight: 600;
+  font-size: clamp(1.6rem, 2vw + 1rem, 2.6rem);
+  line-height: 1.3;
+  letter-spacing: 0.8px;
+  text-transform: capitalize; /* doar prima literă mare pentru un aspect rafinat */
+  color: #1f2937; /* gri închis elegant */
+}
+
+
+
+
+
+/* Text */
+.hero-header h1 {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  font-size: 3rem;
+  font-weight: 900;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-shadow: 3px 3px 12px rgba(0, 0, 0, 0.8);
+  background: linear-gradient(to right, #fff3c4, #ffffff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  padding: 10px 20px;
+}
+
+/* Responsive  */
+@media (max-width: 768px) {
+  .hero-header {
+    height: 240px;
+  }
+  .hero-header h1 {
+    font-size: 2rem;
+    letter-spacing: 1px;
+  }
+}
+
+
+
+
+/* ================== NAV ================== */
+.main-nav {
+  background: linear-gradient(to right,#930303,#ff4500);
+}
+
+.main-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+  flex-wrap: wrap;
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: background .2s ease, color .2s ease, transform .06s ease;
+}
+.main-nav a:hover { background: rgba(255,255,255,.15); }
+.main-nav a:active { transform: translateY(1px); }
+
+
+.main-nav a.active {
+  background: rgba(255,255,255,.18);
+  border-radius: 6px;
+}
+
+/* ================== HERO / DESCRIPTION (HOME) ================== */
+.description {
+  padding: 60px 0 30px;
+}
+
+.desc-text {
+  background-color: #ecb4b4;
+  max-width: 900px;
+  margin: 30px auto 20px;
+  padding: 0 20px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  font-style: italic; /* corect */
+  font-family: Georgia, "Times New Roman", serif; /* familie de font */
+  color: #333;
+  text-align: center;
+  letter-spacing: 0.5px;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+  border-radius: 12px;
+}
+
+
+.desc-image,
+.desc-image2 {
+  display: block;
+  max-width: 75%;
+  height: auto;
+  margin: 20px auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+.desc-image:hover,
+.desc-image2:hover {
+  transform: scale(1.01);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+}
+
+.desc-text2 {
+  display: block;
+  max-width: 900px;
+  margin: 20px auto 50px;
+  padding: 18px 22px;
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: #111;
+  text-align: center;
+  background: #e8b2b2;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+  position: relative;
+  z-index: 1;
+  clear: both;
+}
+
+.about-company {
+  max-width: 1100px;
+  margin: 60px auto;
+  text-align: center;
+  padding: 20px;
+}
+
+.about-company h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #800000;
+}
+
+.about-company p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+.services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+.service {
+  background: #eea8a8;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.service h3 {
+  margin-bottom: 10px;
+  color: #224eed;
+}
+
+.service p {
+  font-size: 1rem;
+  color: #444;
+}
+
+.cta-btn {
+  display: inline-block;
+  padding: 12px 24px;
+  background: linear-gradient(to right, #ff7e00, #ff4500);
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 6px;
+  transition: 0.2s;
+}
+
+.cta-btn:hover {
+  background: linear-gradient(to right, #ff944d, #ff6347);
+  transform: scale(1.05);
+}
+
+
+/* ================== WHY CHOOSE US ================== */
+.why-choose-us {
+  position: relative;
+  padding: 100px 20px;
+  text-align: center;
+  background: url('images/vineyard.jpg') center/cover no-repeat;
+  border-radius: 12px;
+  max-width: 1100px;
+  margin: 60px auto;
+  color: #fff;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.25);
+  overflow: hidden;
+}
+.why-choose-us::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(rgba(128,0,0,0.75), rgba(0,0,0,0.80));
+  border-radius: 12px;
+}
+.why-choose-us h2,
+.why-choose-us p { position: relative; z-index: 1; }
+.why-choose-us h2 {
+  font-size: 2.4rem;
+  margin-bottom: 20px;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.why-choose-us p {
+  font-size: 1.2rem;
+  line-height: 1.7;
+  max-width: 800px;
+  margin: 0 auto;
+  color: #fdfdfd;
+}
+
+
+
+
+
+
+/* ================== WINERIES PAGE ================== */
+body.wineries-page { background: rgba(248,200,216,0.8); } /* opțional */
+
+.breadcrumb {
+  max-width: 1100px;
+  margin: 16px auto 0;
+  padding: 0 20px;
+  color: #666;
+  font-size: .95rem;
+}
+.breadcrumb a { color: #800000; text-decoration: none; }
+.breadcrumb span { margin: 0 6px; }
+
+.page-hero {
+  max-width: 1000px;
+  margin: 24px auto 10px;
+  padding: 24px 20px;
+  text-align: center;
+}
+.page-hero h2 {
+  color: #800000;
+  font-size: 2rem;
+  margin-bottom: 8px;
+}
+.page-hero p {
+  color: #444;
+  font-size: 1.05rem;
+}
+
+.wineries-grid.two-per-row {
+  max-width: 1100px;
+  margin: 20px auto 60px;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 26px;
+}
+.winery-card {
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0,0,0,.08);
+  transition: transform .18s ease, box-shadow .2s ease;
+  min-height: 480px;
+}
+.winery-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(0,0,0,.14);
+}
+.card-link { display: block; color: inherit; text-decoration: none; }
+.winery-card img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  display: block;
+}
+.card-body { padding: 20px 22px 26px; }
+.card-body p { font-size: 1.05rem; line-height: 1.6; }
+
+@media (max-width: 700px) {
+  .wineries-grid.two-per-row { grid-template-columns: 1fr; gap: 18px; }
+  .winery-card img { height: 200px; }
+}
+
+
+
+
+
+
+
+
+
+/* ================== ABOUT Moldova Page ================== */
+.about-intro {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+  text-align: center;
+}
+.about-intro h2 {
+  font-size: 2rem;
+  margin-bottom: 16px;
+  color: #800000;
+}
+.about-intro p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #333;
+  margin-bottom: 14px;
+}
+
+.about-cells {
+  max-width: 1100px;
+  margin: 50px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 0 20px;
+}
+.about-cell {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  padding: 20px;
+}
+.about-cell:nth-child(even) { flex-direction: row-reverse; }
+.about-img {
+  flex: 1;
+  max-width: 40%;
+  border-radius: 12px;
+  object-fit: cover;
+}
+.about-text { flex: 2; }
+.about-text h3 {
+  margin: 0 0 12px;
+  font-size: 1.4rem;
+  color: #800000;
+}
+.about-text p { font-size: 1.05rem; line-height: 1.6; color: #333; }
+
+@media (max-width: 768px) {
+  .about-cell { flex-direction: column; text-align: center; }
+  .about-img { max-width: 100%; }
+}
+/* ================== WINE FACTS ================== */
+.wine-facts {
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 30px 20px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.wine-facts h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #800000;
+}
+
+.wine-facts ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.wine-facts li {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin: 12px 0;
+  padding-left: 28px;
+  position: relative;
+}
+
+.wine-facts li::before {
+  content: "🍷";
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+
+
+
+
+
+
+
+
+
+/* ================== WINE TOURS ================== */
+
+.hero {
+  text-align: center;
+  padding: 60px 20px;
+  background:
+    linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+    url("images/tour-hero.jpg") no-repeat center/cover;
+  color: #fff;
+  border-radius: 12px;
+  margin: 30px auto;
+  max-width: 1100px;
+}
+.hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.hero p {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 0 auto 20px;
+  line-height: 1.6;
+}
+
+/* Container general */
+.tours {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+/* tour card */
+.tours .tour {
+  display: grid;
+  grid-template-columns: minmax(0,1fr) minmax(0,1.6fr);
+  gap: 28px;
+  background: #ffffff;
+  border-radius: 22px;
+  padding: 28px;
+  margin: 28px 0;
+  box-shadow: 0 18px 40px rgba(0,0,0,.08);
+  border: 1px solid #f0f2f5;
+}
+
+/* Alternare: imagine | text */
+.tours .tour.reverse {
+  grid-template-columns: minmax(0,1.6fr) minmax(0,1fr);
+}
+.tours .tour .tour-image { aspect-ratio: 16 / 9; max-height: 420px; }
+.tours .tour .tour-image img { width: 100%; height: 100%; object-fit: cover; border-radius: 22px;}
+
+
+/* Text */
+.tour-text {
+  color: #1f2937;
+  line-height: 1.75;
+  font-size: 1.05rem;
+}
+.tour-text h3 {
+  font-size: 1.9rem;
+  margin: 0 0 12px;
+}
+
+.tour-text p { margin: 12px 0; }
+.tour-text ul {
+  list-style: disc inside;
+  margin: 12px 0;
+  padding-left: 20px;
+}
+
+.testimonials {
+  max-width: 1000px;
+  margin: 60px auto;
+  text-align: center;
+  padding: 20px;
+}
+
+.testimonials h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #800000; /* matches your wine theme */
+}
+
+.testimonial-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 700px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.testimonial-img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 12px;
+}
+
+.testimonial-text {
+  font-style: italic;
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+.testimonial-name {
+  font-weight: bold;
+  color: #444;
+}
+
+
+
+
+
+
+
+
+
+
+/* ================== CONTACT PAGE ================== */
+body.contact-page { background: #fdf4f4; }
+
+.contact-hero {
+  max-width: 900px;
+  margin: 40px auto 30px;
+  text-align: center;
+  padding: 20px;
+}
+.contact-hero h2 {
+  font-size: 2rem;
+  color: #800000;
+  margin-bottom: 10px;
+}
+.contact-hero p {
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.contact-container {
+  max-width: 1100px;
+  margin: 40px auto;
+  display: flex;
+  gap: 40px;
+  padding: 0 20px;
+}
+.contact-info,
+.contact-form {
+  flex: 1;
+  background: #fff;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+.contact-info h3,
+.contact-form h3 {
+  margin-bottom: 16px;
+  color: #800000;
+}
+.contact-info p { margin: 8px 0; font-size: 1.05rem; }
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.contact-form label { font-weight: bold; color: #333; }
+.contact-form input,
+.contact-form textarea {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+.contact-form button {
+  background: linear-gradient(to right, #ff7e00, #ff4500);
+  color: #fff;
+  border: none;
+  padding: 12px;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.contact-form button:hover {
+  background: linear-gradient(to right, #ff944d, #ff6347);
+}
+
+@media (max-width: 768px) {
+  .contact-container { flex-direction: column; }
+}
+
+
+/* Footer */
+.site-footer {
+  text-align: center;
+  padding: 20px;
+  background: #6497df;  
+  color: #fff;
+}
+
+.site-footer a.footer-btn {
+  display: inline-block;
+  margin-left: 8px;
+  padding: 8px 16px;
+  background: linear-gradient(to right, #ff7e00, #ff4500);
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: all 0.25s ease;
+}
+
+.site-footer a.footer-btn:hover {
+  background: linear-gradient(to right, #ff944d, #ff6347);
+  transform: scale(1.05);
+}
+.site-footer a.footer-btn:active {
+  transform: translateY(1px);
+}
